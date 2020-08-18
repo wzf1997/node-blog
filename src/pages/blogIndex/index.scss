@@ -1,1 +1,31 @@
 @import '~antd/dist/antd.css';
+.blog-index{
+    height: 100vh;
+    background-color: rgba(0,0,0,.65);
+    width: 20%;
+    background-image: url('../../assets/image/title.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    .blog-index-first{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .blog-index-avatar{
+        height: 15rem;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .title{
+            font-size: 32rpx;
+            color:white;
+        }
+    }
+    
+}
+.ant-avatar-square:hover{
+     transform: scale(1.2);
+    transition: transfrom 5s;
+}

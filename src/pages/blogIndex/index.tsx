@@ -1,6 +1,6 @@
 import React, { FC , useState } from 'react';
 import './index.scss';
-import { Menu, Button, Collapse } from 'antd';
+import { Menu, Button, Collapse, Avatar, Switch } from 'antd';
 import {
   AppstoreOutlined,
   MenuUnfoldOutlined,
@@ -15,19 +15,23 @@ const { SubMenu } = Menu;
 
 const App: React.FC<{}> = () => {
     const [collapsed, setCollapsed] =  useState<boolean>(false);
-    const toggleCollapsed = () => {
-        setCollapsed(c=>!c);
-    };
+    const [color,setColor] = useState<string>('dark')
+    const  [checked,setChecked] = useState<boolean>(true);
+    const changeMode = (value: string):void=> {
+        setColor(value ? 'dark' : 'light')
+        setChecked(c=> !c);
+    }
     return (
-      <div style={{ width: 256 }}>
-        <Button type="primary" onClick={toggleCollapsed} style={{ marginBottom: 16, marginTop:16 }}>
-          {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
-        </Button>
+      <div style={{ width: 256  }} className='blog-index'>
+        <div className='blog-index-first'>
+            <Switch onChange={changeMode} checked={checked}/>
+            <span style={{ color:'white'}}> {checked? '深色模式':'浅色模式'}</span>
+        </div>
         <Menu
           defaultSelectedKeys={['1']}
           defaultOpenKeys={['sub1']}
-          mode="inline"
-          theme="dark"
+          mode="vertical"
+          theme={color}
           inlineCollapsed={collapsed}
         >
           <Menu.Item key="20" icon={<PieChartOutlined />}>
@@ -51,6 +55,11 @@ const App: React.FC<{}> = () => {
             }
           </SubMenu>
         </Menu>
+         <div className='blog-index-avatar'>
+             <Avatar src={ require('../../assets/image/avatar.jpeg')} shape={'square'} size={150}/>
+             <div className='title' style={{color: "white", fontSize:'32px'}}>wzf1997</div>
+         </div>
+         <Avatar src ={ require('../../assets/image/github.png')} />
       </div>
     );
 }
