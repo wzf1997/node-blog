@@ -1,0 +1,32 @@
+.ant-layout {
+    height: 100vh;
+}
+
+.ant-layout-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    input {
+        width: 80%;
+        display: block;
+    }
+
+    .ant-progress {
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+
+.ant-btn {
+    width: 100%;
+    margin-top: 20px;
+}

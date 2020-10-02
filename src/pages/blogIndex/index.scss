@@ -1,31 +1,59 @@
 @import '~antd/dist/antd.css';
-.blog-index{
+@import '../../assets/style.scss';
+
+body,
+html {
+    height: 100%;
+}
+
+.blog {
+    display: flex;
     height: 100vh;
-    background-color: rgba(0,0,0,.65);
+}
+
+.blog-index {
+    background-color: rgba(0, 0, 0, .65);
     width: 20%;
+    height: 100%;
     background-image: url('../../assets/image/title.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    .blog-index-first{
+    margin-right: 20px;
+
+    .blog-index-first {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 10px;
     }
-    .blog-index-avatar{
+
+    .blog-index-avatar {
         height: 15rem;
         flex-direction: column;
         display: flex;
         justify-content: center;
         align-items: center;
-        .title{
+
+        .title {
             font-size: 32rpx;
-            color:white;
+            color: white;
         }
     }
-    
+
+    .blog-index-detail {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
 }
-.ant-avatar-square:hover{
-     transform: scale(1.2);
-    transition: transfrom 5s;
+
+.blog-content {
+    margin-left: 50px;
+
+}
+
+.ant-avatar-square:hover {
+    transform: scale(1.2);
+    transition: transfrom .5s;
 }

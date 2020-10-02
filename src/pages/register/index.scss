@@ -1,0 +1,47 @@
+.card{
+    display: flex;
+    width: 100%;
+    align-items: center;
+   
+}
+.introduce{
+    background-image: linear-gradient(180deg, #51b0ff, #2878ff);
+    height: 535px;
+    width: 500px;
+    margin-left: 400px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px 5px rgba(0, 255, 213, 0.1), 0 16px 24px 2px rgba(0, 0, 0, 0.05);
+    .img{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .ant-avatar {
+        margin-left:200px;
+        margin-top: 70px;
+    }
+    .name{
+        width: 100%;
+        text-align: center;
+        font-weight: bold;;
+        margin-top: 25px;
+    }
+    .job{
+        width: 100%;
+        text-align: center;
+        color: honeydew;
+    }
+    .note{
+        width: 60%;
+        margin:30px auto;
+        color: honeydew;
+    }
+}
+.login_card{
+    width: 500px;
+    height: 445px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px 5px rgba(231, 6, 212, 0.1), 0 16px 24px 2px rgba(0, 0, 0, 0.05);
+   
+}
